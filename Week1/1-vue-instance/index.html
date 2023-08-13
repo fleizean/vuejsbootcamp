@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <p>{{description}}</p>
+        <a :target="eduflow.target" :href="eduflow.url" v-bind:alt="eduflow.alt" v-bind:kablosuzkedi="owner">{{eduflow.title}}<!--{{url}}--></a> 
+        <!--buradaki href bir attribute bu yüzden üsttekiler gibi kendine özgü bir değişken
+            olmadığı için bizim daha farklı bir yöntem ile vue tarafından veriyi aktarmamız gerek
+            yani interpolation sadece text olan yerlerde çalışır bu yüzden href alanında çalışmayacak
+            "fakat Müfredat ve açıkalamalar için tıklayınız" alanına yazsaydık sorun oluşmayacaktı çünkü
+            bu kısım bir text alanı. Peki bunu nasıl sağlarız dersek v-bind yardımcı olacak v-bind ile vue
+            tarafında url alanındaki veriyi al demiş olduk. v-bind: koymak ile : diyerek devam etmenin bir farkı yok ikisini
+            de kullanabilirsin.
+        -->
+
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
